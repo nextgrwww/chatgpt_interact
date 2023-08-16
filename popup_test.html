@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatGPT Interaction</title>
+</head>
+
+<body>
+    <script>
+    var query = "What is the formula to convert radians to pi? ";
+    var xhr = new XMLHttpRequest();
+    xhr.open("POST", "https://api.chatgpt.com/v1/generate");
+    xhr.setRequestHeader("Content-Type", "application/json");
+    xhr.send(JSON.stringify({
+        query: query
+    }));
+    xhr.onreadystatechange = () => {
+        if (xhr.readyState==4 && xhr.status==200){
+        	console.log(xhr.responseText);
+        }
+    }
+    </script>
+</body>
+
+</html>

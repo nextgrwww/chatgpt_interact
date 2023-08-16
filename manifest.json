@@ -1,0 +1,12 @@
+{
+  "manifest_version": 3,
+  "name": "OpenAI Chat Extension",
+  "version": "1.0",
+  "description": "OpenAI Chat Extension that opens https://chat.openai.com",
+  "permissions": [
+    "activeTab"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  }
+}
